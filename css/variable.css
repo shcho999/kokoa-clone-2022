@@ -1,0 +1,7 @@
+:root {
+  --yellow: #fae100;
+  /*모든 화면의 좌우 공간을 padding하기위한 값*/
+  --horizontal-space: 25px;
+
+  --main-border: 1px solid rgba(0, 0, 0, 0.2);
+}

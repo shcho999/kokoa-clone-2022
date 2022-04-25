@@ -1,0 +1,45 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  /*width가 100%임으로 화면 전체가 nav의 넓이 이었다.
+  그런데 여기서 paddig을 좌우 50을 추가혀면 css는 넓이 사이즈를 
+  유져가 선택한 넓이 + padding으로 설정하여 작업한다
+  즉 여기서 사용되는 넓이의 크기가 화면보다 커 일부 아이콘이 화면 밖으로 사라지는
+  현상이 발생한다.
+  이러한 일이 발생하지 않도록 아래의 옵션을 추가한다.
+  아래의 옵션은 실제 box size를 사용자가 설정한 사이즈로 제한한다는 것이다.
+  css가 padding을 더하여 box사이즈를 설정하지 말라는 것이다. */
+  box-sizing: border-box;
+  border-top: 1px solid rgba(121, 121, 121, 0.3);
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__link {
+  position: relative;
+  color: #2e363e;
+}
+
+.nav__notification {
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  /*포지션을 잡을 때 기준이 되는 점을 정해햐 하는데 그것은 가장 가까운 상위
+  항목이 이어야 한다. 이때 상위항목은 그 포지션을 relative로 설정해 한다.
+  여기서 상위항목은 .nav__link이고 이것의 position을 position: relative;로 설정*/
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
